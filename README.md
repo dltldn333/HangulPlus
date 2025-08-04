@@ -1,3 +1,7 @@
+
+<img width="800" height="600" alt="Frame 2 from Figma" src="https://github.com/user-attachments/assets/62d5c9f6-dd05-47ff-9c8b-807a17cbeb7d" />
+
+
 # 한글+ (Hangul Plus) 프로그래밍 언어
 
 한글+(한글플러스)는 C언어의 철학과 컴파일 과정을 깊이 이해하기 위해 직접 설계한 "한글 프로그래밍 언어" 및 "간단한 컴파일러" 프로젝트입니다.
