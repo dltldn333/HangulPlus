@@ -1,0 +1,50 @@
+정수 값 는(은) 3;
+값 를(을) 값 + 2;
+출력(값);
+출력("이지만 아직 int값은 바이너리값으로 출력돼서 안보임.");
+출력("5");
+출력("내가 만들었다");
+
+
+
+section .data
+값 dq 3
+__str_2 db "이지만 아직 int값은 바이너리값으로 출력돼서 안보임.", 10
+__str_2_len equ $ - __str_2
+__str_4 db "5", 10
+__str_4_len equ $ - __str_4
+__str_6 db "내가 만들었다", 10
+__str_6_len equ $ - __str_6
+
+section .text
+global _start
+
+_start:
+    mov rax, qword [rel 값]
+    add rax, 2
+    mov qword [rel 값], rax
+    mov rax, 0x2000004
+    mov rdi, 1
+    lea rsi, [rel 값]
+    mov rdx, 8
+    syscall
+    mov rax, 0x2000004
+    mov rdi, 1
+    lea rsi, [rel __str_2]
+    mov rdx, __str_2_len
+    syscall
+    mov rax, 0x2000004
+    mov rdi, 1
+    lea rsi, [rel __str_4]
+    mov rdx, __str_4_len
+    syscall
+    mov rax, 0x2000004
+    mov rdi, 1
+    lea rsi, [rel __str_6]
+    mov rdx, __str_6_len
+    syscall
+
+    mov rax, 0x2000001
+    xor rdi, rdi
+    syscall
+

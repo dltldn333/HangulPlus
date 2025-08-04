@@ -1,0 +1,35 @@
+{
+  "name": "hangulplus",
+  "displayName": "한글플러스",
+  "publisher": "siwoo",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hgplus",
+        "aliases": [
+          "한글플러스",
+          "hgplus"
+        ],
+        "extensions": [
+          ".코드"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hgplus",
+        "scopeName": "source.hangulplus",
+        "path": "./syntaxes/hgplus.tmLanguage.json"
+      }
+    ]
+  }
+}

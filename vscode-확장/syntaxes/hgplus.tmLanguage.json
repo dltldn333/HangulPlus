@@ -1,0 +1,23 @@
+{
+  "name": "한글+ 문법",
+  "scopeName": "source.hangulplus",
+  "patterns": [
+    {
+      "name": "keyword.control.hangulplus",
+      "match": "\\b(정수|함수|출력|만약|동안)\\b"
+    },
+    {
+      "name": "string.quoted.double.hangulplus",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "comment.line.semicolon.hangulplus",
+      "match": ";.*$"
+    },
+    {
+      "name": "variable.hangulplus",
+      "match": "\\b[가-힣a-zA-Z_][가-힣\\w]*\\b"
+    }
+  ]
+}
